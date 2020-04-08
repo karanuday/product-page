@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+@font-face {
+  font-family: 'GothamHTF-Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('/assets/fonts/GothamHTF-Book.woff'), url('/assets/fonts/GothamHTF-Book.woff') format('woff');
+}
+@font-face {
+  font-family: 'GothamHTF-Book';
+  font-style: normal;
+  font-weight: bold;
+  src: local('/assets/fonts/GothamHTF-Bold.woff'), url('/assets/fonts/GothamHTF-Bold.woff') format('woff');
+}
+.f-14 {
+  font-size: 14px;
+}
+.f-12 {
+  font-size: 12px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.col-flex {
+  display: flex;
+  flex-direction: column;
+}
+.invert-colors {
+  background: black;
+  color: white;
+}
+.align-center {
+  align-self: center;
+}
+.image {
+  display: block;
+  max-width: 100%;
+}
+.m-t-40 {
+  margin-top: 40px !important;
+}
+@media screen and (max-width : 760px) {
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
