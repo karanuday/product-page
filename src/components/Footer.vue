@@ -70,6 +70,7 @@ a {
 .footer-copyright {
   width: 100%;
   padding: 15px;
+  text-align: center;
   font-size: 12px;
   color: #727272;
   line-height: 15px;

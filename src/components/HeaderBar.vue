@@ -9,7 +9,7 @@
         <router-link to="/about">ABOUT</router-link>
       </div>
       <div class="nav-nav-bar-hamburger align-center expand">
-        <f-icon icon="bars" @click="toggleListNav()"></f-icon>
+        <f-icon :icon="showNav ? 'times' : 'bars'" @click="toggleListNav()"></f-icon>
       </div>
       <div class="nav-nav-bar-list-menu" v-if="showNav">
         <ul>
@@ -17,7 +17,7 @@
           <li @click="toggleListNav()"><router-link to="/about">ABOUT</router-link></li>
         </ul>
       </div>
-      <img :src="require('@/assets/logo.png')" alt="" class="nav-nav-logo">
+      <img :src="require('@/assets/logo.png')" alt="logo" class="nav-nav-logo">
       <div class="nav-actions expand align-center text-right">
         <f-icon :icon="['far', 'user']" class="user-icon"></f-icon>
         <f-icon icon="shopping-cart" class="bag-icon"></f-icon>
@@ -40,12 +40,7 @@ export default {
   }
 }
 </script>
-<style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+<style lang="scss" scoped>
 li {
   border-bottom: 1px solid black;
   background: white;
@@ -57,6 +52,11 @@ li:nth-last-child(1) {
 }
 a {
   margin: 20px;
+  font-weight: bold;
+
+  &.router-link-exact-active {
+    color: #42b983;
+  }
 }
 .user-icon, .bag-icon {
   margin: 10px;
@@ -82,7 +82,6 @@ a {
   flex: 1 1 30%;
 }
 .nav-nav-bar-hamburger {
-  /* padding: 30px 40px 25px; */
   display: none;
 }
 .nav-nav-bar-list-menu {

@@ -22,17 +22,11 @@
         <h2>Signature Insole</h2>
         <p>CARIUMA’s signature insoles are crafted with a hybrid of memory foam and natural vegetable tanned leather, for the optimal comfort. Using an EVA & rubber compound, we have created an insole that is lightweight and resilient, completed with debossed logo on the top and on the side.</p>
       </template>
-      <!-- <template v-slot:prod-info-img>
-        <div style="background: red; width: 40%; height: 50%;"></div>
-      </template> -->
     </ProductInfo>
     <ProductInfo display-order="flipped">
       <template v-slot:prod-info-desc>
         <DeliveryInfo></DeliveryInfo>
       </template>
-      <!-- <template v-slot:prod-info-img>
-        <div style="background: red; width: 40%; height: 50%;"></div>
-      </template> -->
     </ProductInfo>
     <Recommended></Recommended>
     <ProductReview></ProductReview>
@@ -50,7 +44,6 @@ export default {
   name: 'ProductPage',
   components: { DeliveryInfo, ProductInfo, Customizer, Recommended, ProductReview },
   mounted() {
-    console.log('IN HERE');
     this.$store.dispatch('fetchImages');
   }
 }
@@ -59,9 +52,5 @@ export default {
 <style scoped>
 .p-info {
   padding: 30px;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
 }
 </style>

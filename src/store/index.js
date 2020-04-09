@@ -16,7 +16,6 @@ export default new Vuex.Store({
   getters: {
     getRandomImage: (state) => () => {
       const random = parseInt(((Math.random() * 25) + 5) % 25);
-      console.log('INSIDE GETTER', random, state.images[random]);
       return state.images[random] ? state.images[random].url : '';
     },
   },

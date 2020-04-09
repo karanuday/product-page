@@ -1,6 +1,7 @@
+/* Component to display product image with custom information and images*/
 <template>
-  <div class="prod-info flex">
-    <div class="prod-info-data f-14" :style="{'order': order === 'flipped' ? 1 : 0}">
+  <div class="prod-info flex" :class="{'reverse-flex': order === 'flipped'}">
+    <div class="prod-info-data f-14" >
       <slot name="prod-info-desc">
         <h2>Product Name</h2>
         <p>
@@ -8,11 +9,12 @@
         </p>
       </slot>
     </div>
-    <div class="prod-info-img" :style="{'order': order === 'flipped' ? 0 : 1}">
+    <div class="prod-info-img" >
       <slot name="prod-info-img">
         <img
           :src="imageUrl"
           class="image"
+          alt="Product Image"
         />
       </slot>
     </div>
@@ -25,12 +27,13 @@ import { mapGetters } from 'vuex';
 export default {
   name: 'ProductInfo',
   props: {
-    imageSrc: {
+    imageSrc: { 
       type: String,
-      default: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80',
     },
     displayOrder: {
+      // prop to reverse order of info and image display
       type: String,
+      default: 'default',
     },
   },
   computed: {
@@ -38,8 +41,7 @@ export default {
       'getRandomImage',
     ]),
     imageUrl() {
-      console.log(this.getRandomImage());
-      return this.getRandomImage() || this.imageSrc;
+      return this.imageSrc || this.getRandomImage();
     },
     order() {
       return this.displayOrder === 'flipped' ? this.displayOrder : 'default';
@@ -49,9 +51,8 @@ export default {
 </script>
 
 <style scoped>
-.image {
-  /* max-width: 300px; */
-  max-height: 300px;
+.reverse-flex {
+  flex-direction: row-reverse;
 }
 .prod-info {
   width: 100%;
@@ -59,9 +60,6 @@ export default {
 }
 .prod-info-img {
   align-self: center;
-  /* flex-basis: auto;
-  flex: 1; */
-  /* height: 500px; Could have used an scss variable here instead for common height val */
 }
 .prod-info-data {
   flex: 1 0 30%;
@@ -71,7 +69,7 @@ export default {
 }
 @media screen and (max-width : 760px) {
   .prod-info-data {
-    order: 2 !important;
+    order: 1 !important;
   }
 }
 </style>

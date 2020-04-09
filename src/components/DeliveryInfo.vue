@@ -1,3 +1,5 @@
+/* Created a separate component for Delivery Info to be reusable anywhere such information is required.
+It is also customizable to an extent, under the 'FREE RETURN' section*/
 <template>
   <div class="delivery-info f-14">
     <h2>Delivery</h2>

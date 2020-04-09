@@ -7,7 +7,7 @@
       <div class="recommend-items-item">
         <img
           src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"
-          alt=""
+          alt="Product Image"
           class="image">
         <h3 class="no-margin">Product Name 1</h3>
         <span>Product Type</span><br/>
@@ -16,7 +16,7 @@
       <div class="recommend-items-item">
         <img
           src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"
-          alt=""
+          alt="Product Image"
           class="image">
         <h3 class="no-margin">Product Name 1</h3>
         <span>Product Type</span><br/>
@@ -25,7 +25,7 @@
       <div class="recommend-items-item">
         <img
           src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"
-          alt=""
+          alt="Product Image"
           class="image">
         <h3 class="no-margin">Product Name 1</h3>
         <span>Product Type</span><br/>
@@ -34,7 +34,7 @@
       <div class="recommend-items-item">
         <img
           src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"
-          alt=""
+          alt="Product Image"
           class="image">
         <h3 class="no-margin">Product Name 1</h3>
         <span>Product Type</span><br/>

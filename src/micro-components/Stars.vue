@@ -3,15 +3,15 @@
     <div>
       <f-icon
         icon="star"
-        v-for="num in ratingVal"
-        class="lit"
-        :key="num">
+        v-for="(num,idx) in ratingVal"
+        :class="`lit ${num}`"
+        :key="`${idx}-${num}`">
       </f-icon>
       <f-icon
         :icon="['far', 'star']"
-        v-for="num in (5 - ratingVal)"
+        v-for="(num, idx) in (5 - ratingVal)"
         class="lit"
-        :key="num">
+        :key="`${idx}.${num}`">
       </f-icon>
     </div>
     <span class="rating-slot">

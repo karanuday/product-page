@@ -1,3 +1,5 @@
+// Component to allow user to customize the product selection
+
 <template>
   <div class="customizer flex">
     <div class="customizer-left col-flex">
@@ -27,10 +29,12 @@
         :key="productUpdate"
         :src="getRandomImage()"
         class="image"
+        alt="Product Image"
       />
     </div>
   </div>
 </template>
+
 <script>
 import ColorPicker from '@/micro-components/ColorPicker.vue';
 import SizePicker from '@/micro-components/SizePicker.vue';
@@ -59,16 +63,14 @@ export default {
 </script>
 
 <style scoped>
-.image {
-  /* max-width: 300px; */
-  max-height: 300px;
-}
 .customizer-left {
   flex: 1 0 30%;
   padding: 30px;
 }
 .customizer-right {
   align-self: center;
+  width: auto;
+  margin: 0 auto;
 }
 .customizer-left-info {
   justify-content: space-between;
@@ -89,6 +91,9 @@ export default {
 @media screen and (max-width : 760px) {
   .customizer-left {
     order: 1;
+  }
+  .customizer-add-to-cart-btn {
+    width: 100%;
   }
 }
 </style>
